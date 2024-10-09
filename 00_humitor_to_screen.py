@@ -152,7 +152,7 @@ def main():
 		if result:
 			humidity, temperature = result
 			farenheit_temp = convert_celcius_to_fahrenheit(temperature)
-			display_static_message('Humid: %s%%' % humidity, 'Temp: %sF' % (temperature, farenheit_temp))
+			display_static_message('Humid: %s%%' % humidity, 'Temp: %sF' % farenheit_temp)
 			count_without_results = 0
 		else:
 			count_without_results += 1
