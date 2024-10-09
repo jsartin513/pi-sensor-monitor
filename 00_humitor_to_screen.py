@@ -13,6 +13,7 @@
 import RPi.GPIO as GPIO
 import LCD1602
 
+import math
 import time
 
 DHTPIN = 17
@@ -141,7 +142,7 @@ def display_static_message(first_line, second_line):
 	LCD1602.write(1, 1, second_line)
 
 def convert_celcius_to_fahrenheit(celcius):
-	return celcius * 1.8 + 32
+	return math.floor(celcius * 1.8 + 32)
 
 def main():
 	setup()
